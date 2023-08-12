@@ -5,9 +5,9 @@
 if __name__ == "__main__":
     from calculator_1 import add, sub, mul, div
 
-    x = 10
-    y = 5
-    print("{} + {} = {}".format(x, y, add(x, y)))
-    print("{} - {} = {}".format(x, y, sub(x, y)))
-    print("{} * {} = {}".format(x, y, mul(x, y)))
-    print("{} / {} = {}".format(x, y, div(x, y)))
+    a = 10
+    b = 5
+    print("{} + {} = {}".format(a, b, add(a, b)))
+    print("{} - {} = {}".format(a, b, sub(a, b)))
+    print("{} * {} = {}".format(a, b, mul(a, b)))
+    print("{} / {} = {}".format(a, b, div(a, b)))
