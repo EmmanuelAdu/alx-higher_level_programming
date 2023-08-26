@@ -3,6 +3,8 @@
 This program Write the Python function def magic_calculation(a, b):
 that does exactly the same as the following Python bytecode:
 """
+
+
 def magic_calculation(a, b):
     from magic_calculation_102 import add, sub
     if a < b:
