@@ -55,6 +55,8 @@ class Rectangle:
 
     def __str__(self):
         """Return the printable representation of the Rectangle
+
+        Prints the readable representation of rectangle with # character
         """
         rectangle_str = ""
 
@@ -64,5 +66,6 @@ class Rectangle:
         for i in range(0, self.__height):
             for j in range(0, self.__width):
                 rectangle_str += "#"
-            rectangle_str += '\n'
+            if i < self.__height - 1:
+                rectangle_str += '\n'
         return (rectangle_str)
