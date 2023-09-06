@@ -74,7 +74,7 @@ class Rectangle:
         Args:
              size(int) - size of the square
         """
-        return(cls(size, size))
+        return (cls(size, size))
 
     def __str__(self):
         """Printing the object representation of the Rectangle"""
