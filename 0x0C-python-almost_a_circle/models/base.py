@@ -1,6 +1,10 @@
 #!/usr/bin/python3
 """Defines a main class "Base" for all other projects in this task"""
 
+import turtle
+import json
+import csv
+import os
 
 class Base:
     """This is the main base
