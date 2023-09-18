@@ -105,3 +105,39 @@ class Rectangle(Base):
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x,
                                                        self.__y, self.__width,
                                                        self.__height)
+
+    def update(self, *args, **kwargs):
+        """Assigning argument to each instance attribute"""
+
+        if args is not None and len(args) != 0:
+            i = 0
+            for arg1 in args:
+                if i == 0:
+                    if arg1 is None:
+                        self.__init__(self.width, self.height, self.x, self.y)
+                    else:
+                        self.id = arg1
+                elif i == 1:
+                    self.width = arg1
+                elif i == 2:
+                    self.height = arg1
+                elif i == 3:
+                    self.x = arg1
+                elif i == 4:
+                    self.y = arg1
+                i += 1
+        elif kwargs and len(kwargs) != 0:
+            for key, value in kwargs.items():
+                if key == "id":
+                    if value is None:
+                        self.__init__(self.width, self.height, self.x, self.y)
+                    else:
+                        self.id = value
+                elif key == "width":
+                    self.width = value
+                elif key == "height":
+                    self.height = value
+                elif key == "x":
+                    self.x = value
+                elif key == "y":
+                    self.y = value

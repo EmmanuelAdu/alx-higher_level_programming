@@ -1,0 +1,188 @@
+README.md:1:1: E265 block comment should start with '# '
+README.md:3:1: E265 block comment should start with '# '
+README.md:7:1: E265 block comment should start with '# '
+README.md:12:1: E112 expected an indented block
+README.md:12:80: E501 line too long (124 > 79 characters)
+README.md:16:1: E112 expected an indented block
+README.md:17:1: E112 expected an indented block
+README.md:18:18: E701 multiple statements on one line (colon)
+README.md:18:47: E231 missing whitespace after ':'
+README.md:18:47: E701 multiple statements on one line (colon)
+README.md:19:1: E112 expected an indented block
+README.md:19:1: E305 expected 2 blank lines after class or function definition, found 0
+README.md:19:80: E501 line too long (159 > 79 characters)
+README.md:20:80: E501 line too long (94 > 79 characters)
+README.md:21:80: E501 line too long (200 > 79 characters)
+README.md:21:175: E211 whitespace before '('
+README.md:23:1: E265 block comment should start with '# '
+README.md:28:1: E112 expected an indented block
+README.md:31:1: E112 expected an indented block
+README.md:36:1: E112 expected an indented block
+README.md:36:80: E501 line too long (99 > 79 characters)
+README.md:40:51: E275 missing whitespace after keyword
+README.md:40:80: E501 line too long (201 > 79 characters)
+README.md:42:1: E265 block comment should start with '# '
+README.md:45:80: E501 line too long (102 > 79 characters)
+README.md:45:88: E211 whitespace before '('
+README.md:47:1: E112 expected an indented block
+README.md:47:80: E501 line too long (157 > 79 characters)
+README.md:47:82: E225 missing whitespace around operator
+README.md:47:103: E225 missing whitespace around operator
+README.md:48:80: E501 line too long (153 > 79 characters)
+README.md:48:92: E225 missing whitespace around operator
+README.md:48:113: E225 missing whitespace around operator
+README.md:49:73: E225 missing whitespace around operator
+README.md:49:80: E501 line too long (132 > 79 characters)
+README.md:49:94: E225 missing whitespace around operator
+README.md:51:1: E265 block comment should start with '# '
+README.md:52:80: E501 line too long (125 > 79 characters)
+README.md:54:1: E265 block comment should start with '# '
+README.md:55:11: E261 at least two spaces before inline comment
+README.md:55:12: E262 inline comment should start with '# '
+README.md:57:80: E501 line too long (178 > 79 characters)
+README.md:57:138: E261 at least two spaces before inline comment
+README.md:59:1: E265 block comment should start with '# '
+README.md:62:79: E211 whitespace before '['
+README.md:62:80: E501 line too long (124 > 79 characters)
+README.md:62:91: E211 whitespace before '('
+README.md:62:93: E225 missing whitespace around operator
+README.md:62:96: E225 missing whitespace around operator
+README.md:62:100: E225 missing whitespace around operator
+README.md:62:101: E225 missing whitespace around operator
+README.md:62:105: E225 missing whitespace around operator
+README.md:62:110: E225 missing whitespace around operator
+README.md:62:115: E225 missing whitespace around operator
+README.md:62:124: E225 missing whitespace around operator
+README.md:64:1: E265 block comment should start with '# '
+README.md:65:80: E501 line too long (165 > 79 characters)
+README.md:65:138: E261 at least two spaces before inline comment
+README.md:67:1: E265 block comment should start with '# '
+README.md:68:80: E501 line too long (123 > 79 characters)
+README.md:69:1: E112 expected an indented block
+README.md:74:80: E501 line too long (92 > 79 characters)
+README.md:76:1: E265 block comment should start with '# '
+README.md:77:10: E261 at least two spaces before inline comment
+README.md:77:11: E262 inline comment should start with '# '
+README.md:79:80: E501 line too long (189 > 79 characters)
+README.md:81:1: E112 expected an indented block
+README.md:82:80: E501 line too long (178 > 79 characters)
+README.md:85:80: E501 line too long (89 > 79 characters)
+README.md:87:1: E265 block comment should start with '# '
+README.md:92:1: E112 expected an indented block
+README.md:94:63: E231 missing whitespace after ':'
+README.md:95:1: E112 expected an indented block
+README.md:95:80: E501 line too long (188 > 79 characters)
+README.md:95:129: E275 missing whitespace after keyword
+README.md:96:50: E275 missing whitespace after keyword
+README.md:96:80: E501 line too long (152 > 79 characters)
+README.md:97:80: E501 line too long (103 > 79 characters)
+README.md:98:54: E211 whitespace before '('
+README.md:98:56: E225 missing whitespace around operator
+README.md:98:59: E225 missing whitespace around operator
+README.md:98:63: E225 missing whitespace around operator
+README.md:98:64: E225 missing whitespace around operator
+README.md:98:68: E225 missing whitespace around operator
+README.md:98:73: E225 missing whitespace around operator
+README.md:98:77: E225 missing whitespace around operator
+README.md:98:80: E501 line too long (108 > 79 characters)
+README.md:99:80: E501 line too long (180 > 79 characters)
+README.md:101:1: E265 block comment should start with '# '
+README.md:106:25: E211 whitespace before '('
+README.md:106:27: E225 missing whitespace around operator
+README.md:106:80: E501 line too long (87 > 79 characters)
+README.md:107:80: E501 line too long (168 > 79 characters)
+README.md:107:135: E211 whitespace before '('
+README.md:109:1: E265 block comment should start with '# '
+README.md:112:80: E501 line too long (110 > 79 characters)
+README.md:114:1: E112 expected an indented block
+README.md:119:74: E211 whitespace before '('
+README.md:119:80: E501 line too long (95 > 79 characters)
+README.md:123:1: E265 block comment should start with '# '
+README.md:126:80: E501 line too long (138 > 79 characters)
+README.md:128:1: E112 expected an indented block
+README.md:130:1: E112 expected an indented block
+README.md:136:1: E265 block comment should start with '# '
+README.md:139:80: E501 line too long (132 > 79 characters)
+README.md:141:1: E112 expected an indented block
+README.md:143:1: E112 expected an indented block
+README.md:148:1: E265 block comment should start with '# '
+README.md:153:80: E501 line too long (154 > 79 characters)
+README.md:155:1: E112 expected an indented block
+README.md:159:1: E265 block comment should start with '# '
+README.md:162:80: E501 line too long (149 > 79 characters)
+README.md:164:1: E112 expected an indented block
+README.md:164:80: E501 line too long (110 > 79 characters)
+README.md:166:24: E225 missing whitespace around operator
+README.md:166:34: E225 missing whitespace around operator
+README.md:167:46: E211 whitespace before '('
+README.md:170:1: E265 block comment should start with '# '
+README.md:173:80: E501 line too long (153 > 79 characters)
+README.md:175:1: E112 expected an indented block
+README.md:179:1: E265 block comment should start with '# '
+README.md:182:80: E501 line too long (137 > 79 characters)
+README.md:184:1: E112 expected an indented block
+README.md:185:80: E501 line too long (93 > 79 characters)
+README.md:186:1: E112 expected an indented block
+README.md:186:43: E275 missing whitespace after keyword
+README.md:186:72: E211 whitespace before '('
+README.md:186:80: E501 line too long (99 > 79 characters)
+README.md:192:1: E265 block comment should start with '# '
+README.md:195:80: E501 line too long (107 > 79 characters)
+README.md:197:1: E112 expected an indented block
+README.md:197:24: E225 missing whitespace around operator
+README.md:197:34: E225 missing whitespace around operator
+README.md:199:80: E501 line too long (116 > 79 characters)
+README.md:199:83: E211 whitespace before '('
+README.md:200:53: E211 whitespace before '('
+README.md:202:1: E265 block comment should start with '# '
+README.md:204:1: E265 block comment should start with '# '
+README.md:205:80: E501 line too long (161 > 79 characters)
+README.md:207:1: E112 expected an indented block
+README.md:207:24: E225 missing whitespace around operator
+README.md:207:34: E225 missing whitespace around operator
+README.md:210:1: E112 expected an indented block
+README.md:210:13: E225 missing whitespace around operator
+README.md:210:15: E225 missing whitespace around operator
+README.md:210:16: E231 missing whitespace after ','
+README.md:210:17: E225 missing whitespace around operator
+README.md:210:23: E225 missing whitespace around operator
+README.md:210:24: E231 missing whitespace after ','
+README.md:210:25: E225 missing whitespace around operator
+README.md:210:32: E225 missing whitespace around operator
+README.md:210:33: E231 missing whitespace after ','
+README.md:210:34: E225 missing whitespace around operator
+README.md:210:36: E225 missing whitespace around operator
+README.md:210:37: E231 missing whitespace after ','
+README.md:210:38: E225 missing whitespace around operator
+README.md:210:40: E225 missing whitespace around operator
+README.md:211:10: E225 missing whitespace around operator
+README.md:211:12: E225 missing whitespace around operator
+README.md:211:13: E231 missing whitespace after ','
+README.md:211:14: E225 missing whitespace around operator
+README.md:211:19: E225 missing whitespace around operator
+README.md:211:20: E231 missing whitespace after ','
+README.md:211:21: E225 missing whitespace around operator
+README.md:211:23: E225 missing whitespace around operator
+README.md:211:24: E231 missing whitespace after ','
+README.md:211:25: E225 missing whitespace around operator
+README.md:211:27: E225 missing whitespace around operator
+README.md:213:1: E265 block comment should start with '# '
+README.md:215:1: E265 block comment should start with '# '
+README.md:216:80: E501 line too long (152 > 79 characters)
+README.md:218:1: E112 expected an indented block
+README.md:220:80: E501 line too long (120 > 79 characters)
+README.md:222:50: E261 at least two spaces before inline comment
+README.md:222:80: E501 line too long (87 > 79 characters)
+README.md:223:80: E501 line too long (111 > 79 characters)
+README.md:224:72: E225 missing whitespace around operator
+README.md:224:80: E501 line too long (99 > 79 characters)
+README.md:225:38: E225 missing whitespace around operator
+README.md:225:80: E501 line too long (162 > 79 characters)
+README.md:225:88: E225 missing whitespace around operator
+README.md:225:139: E211 whitespace before '('
+README.md:226:44: E225 missing whitespace around operator
+README.md:227:80: E501 line too long (91 > 79 characters)
+models/__init__.py:1:1: W391 blank line at end of file
+models/base.py:9:1: E302 expected 2 blank lines, found 1
+tests/test_models/test_base.py:12:1: E302 expected 2 blank lines, found 1
+tests/test_models/test_base.py:19:40: E225 missing whitespace around operator
