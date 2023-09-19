@@ -40,3 +40,36 @@ class Square(Rectangle):
             raise ValueError("width must be > 0")
         self.__width = value
         self.__height = value
+
+    def update(self, *args, **kwargs):
+        if args and len(args) != 0:
+            i = 0
+            for arg1 in args:
+                if i == 0:
+                    if not isinstance(arg1, int) and arg1 is not None:
+                        raise TypeError("id must be an integer")
+                    self.id = arg1
+                elif i == 1:
+                    self.size = arg1
+                elif i == 2:
+                    self.x = arg1
+                elif i == 3:
+                    self.y = arg1
+                i += 1
+        else:
+            for k, v in kwargs.items():
+                if k == "id":
+                    if not isinstance(v, int) and v is not None:
+                        raise TypeError("id must be an integer")
+                if k == "size":
+                    self.size = v
+                if k == "x":
+                    self.x = v
+                if k == "y":
+                    self.y = v
+
+    def to_dictionary(self):
+        """Represents the dictionary representation of a square"""
+        my_dict = {'id': self.id, 'size': self.size, 'x': self.x,
+                   'y': self.y}
+        return my_dict
