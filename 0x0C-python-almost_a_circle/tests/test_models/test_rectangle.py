@@ -311,6 +311,55 @@ class TestRectangle_y(unittest.TestCase):
     def test_negative_y(self):
         with self.assertRaisesRegex(ValueError, "y must be >= 0"):
             Rectangle(9, 23, 7, -8)
+
+class TestRectangle_order_of_initialization(unittest.TestCase):
+    """Unittest for checking errors in order of initialization"""
+     
+    def test_width_before_height(self):
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
+            Rectangle("invalid width", "invalid height")
+
+    def test_width_before_x(self):
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
+            Rectangle("invalid width", 2, "invalid x")
+
+    def test_width_before_y(self):
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
+            Rectangle("invalid width", 2, 3, "invalid y")
+
+    def test_height_before_x(self):
+        with self.assertRaisesRegex(TypeError, "height must be an integer"):
+            Rectangle(1, "invalid height", "invalid x")
+
+    def test_height_before_y(self):
+        with self.assertRaisesRegex(TypeError, "height must be an integer"):
+            Rectangle(1, "invalid height", 2, "invalid y")
+
+    def test_x_before_y(self):
+        with self.assertRaisesRegex(TypeError, "x must be an integer"):
+            Rectangle(1, 2, "invalid x", "invalid y")
+
+class TestRectangle_area(unittest.TestCase):
+    """Unittests for testing the area method of the Rectangle class."""
+
+    def test_area_small(self):
+        r = Rectangle(10, 2, 0, 0, 0)
+        self.assertEqual(20, r.area())
+
+    def test_large_area(self):
+        r = Rectangle(999999999999999, 999999999999999999, 0, 0, 1)
+        self.assertEqual(999999999999998999000000000000001, r.area())
+
+    def test_area_changed_attributes(self):
+        r = Rectangle(2, 10, 1, 1, 1)
+        r.width = 7
+        r.height = 14
+        self.assertEqual(98, r.area())
+
+    def test_Error_area_one_arg(self):
+        r = Rectangle(2, 10, 1, 1, 1)
+        with self.assertRaises(TypeError):
+            r.area(1)
      
 class TestRectangle_to_dictionary(unittest.TestCase):
     """Unittests for testing to_dictionary method of the Rectangle class."""
