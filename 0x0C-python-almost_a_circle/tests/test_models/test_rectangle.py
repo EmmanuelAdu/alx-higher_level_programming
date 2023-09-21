@@ -360,7 +360,33 @@ class TestRectangle_area(unittest.TestCase):
         r = Rectangle(2, 10, 1, 1, 1)
         with self.assertRaises(TypeError):
             r.area(1)
-     
+
+class TestRectangle_with_stdout(unittest.TestCase):
+    """Unittests for capturing and comparing text printed to stdout"""
+
+    @staticmethod
+    def capture_to_stdout(rect, method):
+        """Captures and compares text printed to stdout
+
+        Args:
+             rect(Rectangle) - an instance of a rectangle
+             method(method) - a method that is either 'print' or 'display'
+        """
+        capture = io.StringIO()
+        sys.stdout = capture
+        if method == "print":
+            print(rect)
+        else:
+            rect.display()
+        sys.stdout = sys.__stdout__
+        return capture
+    
+    def test_str_mthd_print_width_height(self):
+        R = Rectangle(4, 6)
+        capture = TestRectangle_with_stdout.capture_to_stdout(R, "print")
+        compare = "[Rectangle] ({}) 0/0 - 4/6\n".format(R.id)
+        self.assertEqual(compare, capture.getvalue())
+
 class TestRectangle_to_dictionary(unittest.TestCase):
     """Unittests for testing to_dictionary method of the Rectangle class."""
 
