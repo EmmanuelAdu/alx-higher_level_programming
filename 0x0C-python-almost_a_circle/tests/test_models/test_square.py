@@ -92,5 +92,50 @@ class TestSquare(unittest.TestCase):
     def test_y_getter(self):
         self.assertEqual(0, Square(6).y)
 
+#Testing For Errors
+class TestSquare_size(unittest.TestCase):
+    """Unittest for testing the size"""
+
+    def test_size_None(self):
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
+            Square(None)
+    
+    def test_size_str(self):
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
+            Square("string")
+
+    def test_size_float(self):
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
+            Square(20.68)
+    
+    def test_size_complex(self):
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
+            Square(complex(67))
+
+    def test_size_dict(self):
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
+            Square({'Jason': 23, 'Eric': 4})
+
+    def test_size_bool(self):
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
+            Square(True, 4, 5, 2)
+
+    def test_size_list(self):
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
+            Square(["Joseph", 5], 7, 8, 9)
+
+    def test_size_set(self):
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
+            Square({3, 4}, 6, 7)
+
+    def test_size_frozen_set(self):
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
+            Square(frozenset({'Kennedy', 'Akos'}), 3, 4, 6)
+
+    def test_size_tuple(self):
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
+            Square((8, 4), 5, 7)
+     
+
 if __name__ == "__main__":
     unittest.main()
