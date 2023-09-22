@@ -1,64 +1,96 @@
 #!/usr/bin/python3
 
+"""Define unittest for class Square
+
+Unittest classes:
+    TestSquare
+    TestSquare_size
+    TestSquare_y
+    TestSquare_x
+    TestSquare_order_of_initialization
+    TestSquare_area
+    TestSquare_update_args
+    TestSquare_update_kwargs
+    TestSquare_stdout
+    TestSquare_to_dictionary
+"""
 import unittest
 import os
 import io
+import sys
 from models.base import Base
 from models.rectangle import Rectangle
 from models.square import Square
-import sys
 import json
 
 class TestSquare(unittest.TestCase):
-    """Test class for Square class."""
+    """Unittest for the Class Square"""
+    
+    def test_is_base(self):
+        self.assertIsInstance(Square(5), Base)
+    
+    def test_is_rectangle(self):
+        self.assertIsInstance(Square(5), Rectangle)
 
-    def setUp(self):
-        Base._Base__nb_objects = 0
+    def test_no_argument(self):
+        with self.assertRaises(TypeError):
+            s = Square()
+    
+    def test_one_arg(self):
+        s = Square(3)
+        s1 = Square(5)
+        self.assertEqual(s.id, s1.id - 1)
+    
+    def test_two_args(self):
+        s1 = Square(4, 5)
+        s2 = Square(5, 7)
+        self.assertEqual(s1.id, s2.id - 1)
 
-    def test_10_0(self):
-        """Test Square class: check for attributes."""
+    def test_three_args(self):
+        s1 = Square(3, 4, 5)
+        s2 = Square(6, 7, 8)
+        self.assertEqual(s1.id, s2.id - 1)
 
-        s0 = Square(1)
-        self.assertEqual(s0.id, 1)
-        s1 = Square(5, 3, 4)
-        self.assertEqual(s1.height, 5)
-        self.assertEqual(s1.width, 5)
-        self.assertEqual(s1.x, 3)
-        self.assertEqual(s1.y, 4)
-        self.assertEqual(s1.id, 2)
+    def test_four_args(self):
+        self.assertEqual(6, Square(3, 5, 4, 6).id)
 
-    def test_10_1(self):
-        """Test __str__ representation."""
+    #ERROR
+    def test_above_four_args(self):
+        with self.assertRaises(TypeError):
+            Square(5, 4, 6, 8, 2)
+    #ERROR
+    def test_private_size(self):
+        with self.assertRaises(AttributeError):
+            print(Square(2, 3, 4, 5).__size)
 
-        s1 = Square(9, 4, 5, 6)
-        self.assertEqual(str(s1), "[Square] (6) 4/5 - 9")
+    def test_size_getter(self):
+        self.assertEqual(5, Square(5, 4, 3, 2).size)
 
-    def test_10_2(self):
-        """Test Square class: check for inheritance."""
+    def test_size_setter(self):
+        s1 = Square(5, 4, 3, 2)
+        s1.size = 8
+        self.assertEqual(8, s1.size)
 
-        s1 = Square(6)
-        self.assertTrue(isinstance(s1, Rectangle))
-        self.assertTrue(issubclass(Square, Rectangle))
-        self.assertFalse(isinstance(Square, Rectangle))
-        self.assertTrue(isinstance(s1, Base))
-        self.assertTrue(issubclass(Square, Base))
-        self.assertFalse(isinstance(Square, Base))
+    def test_width_setter(self):
+        s = Square(5, 4, 3, 2)
+        s.size = 8
+        self.assertEqual(8, s.width)
 
-    # def test_10_3(self):
-    #     """Test Square class: check for missing args."""
+    def test_height_setter(self):
+        s = Square(5, 4, 3, 2)
+        s.size = 9
+        self.assertEqual(9, s.height)
 
-    #     with self.assertRaises(TypeError) as x:
-    #         s1 = Square()
-    #     self.assertEqual(
-    #         "__init__() missing 1 required positional argument: 'size'", str(
-    #             x.exception))
+    def test_x_setter(self):
+        s = Square(5, 4, 3, 2)
+        s.x = 7
+        self.assertEqual(7, s.x)
 
-    def test_10_4(self):
-        """Test Square for methods inherited from Rectangle."""
+    def test_x_getter(self):
+        self.assertEqual(0, Square(5).x)
 
-        s1 = Square(9)
-        self.assertEqual(s1.area(), 81)
-        s2 = Square(4, 1, 2, 5)
+    def test_y_getter(self):
+        self.assertEqual(0, Square(6).y)
 
 if __name__ == "__main__":
     unittest.main()
