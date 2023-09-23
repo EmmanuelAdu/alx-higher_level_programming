@@ -135,6 +135,181 @@ class TestSquare_size(unittest.TestCase):
     def test_size_tuple(self):
         with self.assertRaisesRegex(TypeError, "width must be an integer"):
             Square((8, 4), 5, 7)
+
+    def test_range_size(self):
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
+            Square(range(5))
+
+    def test_nan_size(self):
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
+            Square(float('nan'))
+
+    def test_size_mem_view(self):
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
+            Square(memoryview(b'abcd'))
+
+    def test_size_inf(self):
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
+            Square(float('inf'))
+
+    def test_size_bytearray(self):
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
+            Square(bytearray(b'abcde'))
+
+    def test_size_bytes(self):
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
+            Square(b'BEEW')
+
+    #ErrorChecking For Negative Numbers
+    def test_negative_size(self):
+        with self.assertRaisesRegex(ValueError, "width must be > 0"):
+            Square(-4, 5, 6)
+    
+    def test_zero_size(self):
+        with self.assertRaisesRegex(ValueError, "width must be > 0"):
+            Square(0, 5, 8)
+
+class TestSquare_x(unittest.TestCase):
+    """Unittest for x -coordinates of a square"""
+    def test_x_None(self):
+        with self.assertRaisesRegex(TypeError, "x must be an integer"):
+            Square(3, None)
+    
+    def test_x_str(self):
+        with self.assertRaisesRegex(TypeError, "x must be an integer"):
+            Square(3, "string")
+
+    def test_x_float(self):
+        with self.assertRaisesRegex(TypeError, "x must be an integer"):
+            Square(5, 20.68, 6)
+    
+    def test_x_complex(self):
+        with self.assertRaisesRegex(TypeError, "x must be an integer"):
+            Square(3, complex(67))
+
+    def test_x_dict(self):
+        with self.assertRaisesRegex(TypeError, "x must be an integer"):
+            Square(5, {'Jason': 23, 'Eric': 4})
+
+    def test_x_bool(self):
+        with self.assertRaisesRegex(TypeError, "x must be an integer"):
+            Square(5, True, 5, 2)
+
+    def test_x_list(self):
+        with self.assertRaisesRegex(TypeError, "x must be an integer"):
+            Square(6, ["Joseph", 5], 8, 9)
+
+    def test_x_set(self):
+        with self.assertRaisesRegex(TypeError, "x must be an integer"):
+            Square(5, {3, 4}, 6, 7)
+
+    def test_x_frozen_set(self):
+        with self.assertRaisesRegex(TypeError, "x must be an integer"):
+            Square(3, frozenset({'Kennedy', 'Akos'}), 4, 6)
+
+    def test_x_tuple(self):
+        with self.assertRaisesRegex(TypeError, "x must be an integer"):
+            Square(9, (8, 4), 5, 7)
+
+    def test_range_x(self):
+        with self.assertRaisesRegex(TypeError, "x must be an integer"):
+            Square(4, range(5))
+
+    def test_nan_x(self):
+        with self.assertRaisesRegex(TypeError, "x must be an integer"):
+            Square(4, float('nan'))
+
+    def test_x_mem_view(self):
+        with self.assertRaisesRegex(TypeError, "x must be an integer"):
+            Square(6, memoryview(b'abcd'))
+
+    def test_x_inf(self):
+        with self.assertRaisesRegex(TypeError, "x must be an integer"):
+            Square(6, float('inf'))
+
+    def test_x_bytearray(self):
+        with self.assertRaisesRegex(TypeError, "x must be an integer"):
+            Square(7, bytearray(b'abcde'))
+
+    def test_x_bytes(self):
+        with self.assertRaisesRegex(TypeError, "x must be an integer"):
+            Square(7, b'BEEW')
+
+    #ErrorChecking For Negative Numbers
+    def test_negative_x(self):
+        with self.assertRaisesRegex(ValueError, "x must be >= 0"):
+            Square(4, -5, 6)
+
+class TestSquare_y(unittest.TestCase):
+    """Unittest for y -coordinates of a square"""
+    def test_y_None(self):
+        with self.assertRaisesRegex(TypeError, "y must be an integer"):
+            Square(2, 3, None)
+    
+    def test_y_str(self):
+        with self.assertRaisesRegex(TypeError, "y must be an integer"):
+            Square(4, 3, "string")
+
+    def test_y_float(self):
+        with self.assertRaisesRegex(TypeError, "y must be an integer"):
+            Square(3, 5, 20.68, 6)
+    
+    def test_y_complex(self):
+        with self.assertRaisesRegex(TypeError, "y must be an integer"):
+            Square(4, 3, complex(67))
+
+    def test_y_dict(self):
+        with self.assertRaisesRegex(TypeError, "y must be an integer"):
+            Square(4, 5, {'Jason': 23, 'Eric': 4})
+
+    def test_y_bool(self):
+        with self.assertRaisesRegex(TypeError, "y must be an integer"):
+            Square(4, 5, True, 5)
+
+    def test_y_list(self):
+        with self.assertRaisesRegex(TypeError, "y must be an integer"):
+            Square(9, 6, ["Joseph", 5], 8)
+
+    def test_y_set(self):
+        with self.assertRaisesRegex(TypeError, "y must be an integer"):
+            Square(4, 5, {3, 4}, 7)
+
+    def test_y_frozen_set(self):
+        with self.assertRaisesRegex(TypeError, "y must be an integer"):
+            Square(4, 3, frozenset({'Kennedy', 'Akos'}), 4)
+
+    def test_y_tuple(self):
+        with self.assertRaisesRegex(TypeError, "y must be an integer"):
+            Square(6, 9, (8, 4), 5)
+
+    def test_range_y(self):
+        with self.assertRaisesRegex(TypeError, "y must be an integer"):
+            Square(5, 4, range(5))
+
+    def test_nan_y(self):
+        with self.assertRaisesRegex(TypeError, "y must be an integer"):
+            Square(7, 4, float('nan'))
+
+    def test_y_mem_view(self):
+        with self.assertRaisesRegex(TypeError, "y must be an integer"):
+            Square(8, 6, memoryview(b'abcd'))
+
+    def test_y_inf(self):
+        with self.assertRaisesRegex(TypeError, "y must be an integer"):
+            Square(2, 6, float('inf'))
+
+    def test_y_bytearray(self):
+        with self.assertRaisesRegex(TypeError, "y must be an integer"):
+            Square(2, 7, bytearray(b'abcde'))
+
+    def test_y_bytes(self):
+        with self.assertRaisesRegex(TypeError, "y must be an integer"):
+            Square(1, 7, b'BEEW')
+
+    #ErrorChecking For Negative Numbers
+    def test_negative_y(self):
+        with self.assertRaisesRegex(ValueError, "y must be >= 0"):
+            Square(7, 4, -5, 6)
      
 
 if __name__ == "__main__":
