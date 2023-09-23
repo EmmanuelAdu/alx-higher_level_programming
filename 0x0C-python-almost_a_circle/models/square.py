@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Define inherited class Square"""
+"""  """
 
 from models.rectangle import Rectangle
 
