@@ -1,11 +1,12 @@
 #!/usr/bin/python3
-"""  """
+"""Defines class square
+"""
 
 from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
-    """This represents an inherited Square from Rectangle(sub-parent)"""
+    """Represent Square"""
 
     def __init__(self, size, x=0, y=0, id=None):
         """Initializes its own attributes
