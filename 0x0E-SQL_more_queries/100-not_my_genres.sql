@@ -4,14 +4,14 @@
 -- Results must be sorted in ascending order by the genre name
 -- You can use a maximum of two SELECT statement
 
-SELECT tg.name
-FROM tv_genres AS tg
-WHERE tg.id NOT IN
-(SELECT tg.id
-FROM tg
-INNER JOIN tv_show_genres AS tsg
-ON tg.id = tsg.genre_id
-INNER JOIN tv_shows AS ts
-ON tsg.show_id = ts.id
-WHERE ts.title = "Dexter")
-ORDER BY tg.name;
+SELECT tv_genres.name
+FROM tv_genres
+WHERE tv_genres.id NOT IN
+(SELECT tv_genres.id
+	FROM tv_genres
+	INNER JOIN tv_show_genres
+	ON tv_genres.id = tv_show_genres.genre_id
+	INNER JOIN tv_shows
+	ON tv_show_genres.show_id = tv_shows.id
+	WHERE tv_shows.title = "Dexter")
+ORDER BY tv_genres.name;
