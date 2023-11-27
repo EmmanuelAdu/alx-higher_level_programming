@@ -11,7 +11,8 @@ if __name__ == '__main__':
     Using MySQLdb to connect to database
     """
     dbConnect = MySQLdb.connect(
-            host="localhost", user=argv[1], port=3306, passwd=argv[2], db=argv[3])
+            host="localhost", user=argv[1], port=3306,
+            passwd=argv[2], db=argv[3])
 
     dbCursor = dbConnect.cursor()
     dbCursor.execute("SELECT * FROM states")
