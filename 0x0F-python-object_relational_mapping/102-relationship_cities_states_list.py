@@ -24,4 +24,4 @@ if __name__ == "__main__":
     for St in Session.query(State).order_by(State.id):
         for Ct in St.cities:
             print(Ct.id, Ct.name, sep=": ", end="")
-            print("-> " + St.name)
+            print(" -> " + St.name)
