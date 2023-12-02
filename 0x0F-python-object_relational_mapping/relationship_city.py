@@ -6,8 +6,7 @@ in SQLAlchemy and links to `cities` in the database
 
 from sqlalchemy import Integer, Column, ForeignKey, String
 from sqlalchemy.ext.declarative import declarative_base
-
-Base = declarative_base()
+from relationship_state import Base
 
 
 class City(Base):
